@@ -1,7 +1,7 @@
 {
-  "name": "plugin name",
-  "version": "0",
-  "description": "What do I do as an extension",
+  "name": "Scrape LinkedIn",
+  "version": "1.0",
+  "description": "Scrape this, Scrape that",
   "background": {"page": "background.html"},
   "manifest_version": 2,
   "browser_action": {
