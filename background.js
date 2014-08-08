@@ -43,12 +43,38 @@ $(function() {
 					}
 				}
 			});
-			console.log(cons);
+
+			if(cons) {
+				var div = '<div class="-pred-sticky-right -pred-show">';
+				div += '<div data-show="1" class="-pred-side-click">';
+				div += '<div class="-pred-side-button">';
+				div += '<div class="-pred-side-btn-txt">...</div>';
+				div += '</div>';
+				div += '</div>';
+				//div += '<div>'+ cons +'</div>';
+				div += '</div>';
+
+				$('body').append(div).css({'margin-right': '260px'});
+
+				$('.-pred-side-click').click(function() {
+					var show = $(this).attr('data-show');
+					if(show == '1') {
+						$(this).attr({'data-show': '0'});
+						$(this).parents('.-pred-sticky-right').addClass('-pred-hide').removeClass('-pred-show');
+					} 
+					else {
+						$(this).attr({'data-show': '1'});
+						$(this).parents('.-pred-sticky-right').addClass('-pred-show').removeClass('-pred-hide');
+					}
+				});
+			}
 		}
 	};
 	
 	/* Options */
 	var host = window.location.hostname;
 	var option = {'host': host};
-	predikt.init(option);
+	setTimeout(function() {
+		predikt.init(option);
+	}, 2000);
 });

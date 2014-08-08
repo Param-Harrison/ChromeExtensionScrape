@@ -1,1 +1,7 @@
 /*  Read about this page here: https://developer.chrome.com/extensions/content_scripts.html */
+.-pred-sticky-right {position: fixed;top: 0;right: 0;height: 100%;background: #fff;z-index: 2147483647;}
+.-pred-sticky-right.-pred-show {width: 250px;}
+.-pred-sticky-right.-pred-hide {width: 10px;}
+.-pred-side-click {position: absolute;top: 0;left: 0;width: 10px;height: 100%;background: #ccc;cursor: pointer;}
+.-pred-side-button {position: relative;width: 10px;height: 10%;top: 45%;left: 0;background: #bbb;}
+.-pred-side-btn-txt {position: relative;left: 0;font-size: 36px;top: 20%;width: 10px;height: 100%;word-wrap: break-word;color: #444;line-height: 0.2;}
